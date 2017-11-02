@@ -14,6 +14,7 @@ main(int argc, char *argv[])
     } else if (rc == 0) { // child (new process)
         printf("hello, I am child (pid:%d)\n", (int) getpid());
     } else {              // parent goes down this path (main)
+        sleep(2); // you may remove this line, for the purpose of testing delay
         printf("hello, I am parent of %d (pid:%d)\n", rc, getpid());
     }
 
